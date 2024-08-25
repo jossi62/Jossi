@@ -11,7 +11,7 @@ const handler = async (m, {conn, usedPrefix}) => {
   const text = `${tradutor.texto1[0]}
 
 ${tradutor.texto1[1]}
-1.- https://chat.whatsapp.com/CCDGO1lIuH3Ggr4nA44cbY`.trim();
+1.- https://chat.whatsapp.com/IGsGRrP8paEAD2mHVF0xUT`.trim();
   const buttonMessage= {
     'document': {url: `https://github.com/BrunoSobrino/TheMystic-Bot-MD`},
     'mimetype': `application/${document}`,
@@ -28,7 +28,7 @@ ${tradutor.texto1[1]}
         'title': `${tradutor.texto3}`,
         'body': wm,
         'thumbnail': imagen1,
-        'sourceUrl': 'https://chat.whatsapp.com/CCDGO1lIuH3Ggr4nA44cbY'}},
+        'sourceUrl': 'https://chat.whatsapp.com/IGsGRrP8paEAD2mHVF0xUT'}},
     'caption': text,
     'footer': wm,
     'headerType': 6};
