@@ -1,20 +1,29 @@
+//import db from '../lib/database.js'
 
+let handler = async (m, { conn, text, usedPrefix, command }) => {
+    let who
+    if (m.isGroup) who = m.mentionedJid[0] ? m.mentionedJid[0] : m.quoted ? m.quoted.sender : false
+    else who = m.chat
 
-const handler = async (m, {conn, participants, usedPrefix, command}) => {
-  const datas = global
-  const idioma = datas.db.data.users[m.sender].language
-  const _translate = JSON.parse(fs.readFileSync(`./language/${idioma}.json`))
-  const tradutor = _translate.plugins.owner_banuser
+    if (!who) return m.reply(`🚩 Etiqueta a un usuario.`)
 
-  const BANtext = `${tradutor.texto1}\n*${usedPrefix + command} @${global.suittag}*`;
-  if (!m.mentionedJid[0] && !m.quoted) return m.reply(BANtext, m.chat, {mentions: conn.parseMention(BANtext)});
-  let who;
-  if (m.isGroup) who = m.mentionedJid[0] ? m.mentionedJid[0] : m.quoted.sender;
-  else who = m.chat;
-  const users = global.db.data.users;
-  users[who].banned = true;
-  m.reply(tradutor.texto2);
-};
-handler.command = /^banuser$/i;
-handler.rowner = true;
-export default handler;
+    let users = global.db.data.users
+
+    // Verificar si el usuario existe en la base de datos
+    if (!users[who]) {
+        return m.reply(`🚩 El usuario no está registrado en la base de datos.`)
+    }
+
+    // Establecer la propiedad 'banned' a true
+    users[who].banned = true
+
+    // Responder con un mensaje de confirmación
+    conn.reply(m.chat, `🚩 @${who.split`@`[0]} ha sido baneado con éxito, ya no podrá volver a usar mis comandos.`, m, { mentions: [who] })
+}
+
+handler.help = ['ban *@user*']
+handler.tags = ['owner']
+handler.command = /^ban$/i
+handler.rowner = true
+
+export default handler

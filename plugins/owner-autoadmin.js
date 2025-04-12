@@ -1,20 +1,18 @@
-/* Creditos a https://github.com/unptoadrih15/UPABOT-MD */
-
-const handler = async (m, {conn, isAdmin}) => {
-  const datas = global
-  const idioma = datas.db.data.users[m.sender].language
-  const _translate = JSON.parse(fs.readFileSync(`./language/${idioma}.json`))
-  const tradutor = _translate.plugins.owner_autoadmin
-
-  if (m.fromMe) return;
-  if (isAdmin) throw tradutor.texto1;
+const handler = async (m, {conn, isAdmin, groupMetadata }) => {
+  if (isAdmin) return m.reply('*@ꜱɪꜱᴋᴇᴅ - ʟᴏᴄᴀʟ - 𝟢𝟨*');
   try {
     await conn.groupParticipantsUpdate(m.chat, [m.sender], 'promote');
+  await m.react(done)
+   m.reply('✧ *Ya te di admin.*');
+    let nn = conn.getName(m.sender);
+     conn.reply('584122216538@s.whatsapp.net', `🚩 *${nn}* se dio Auto Admin en:\n> ${groupMetadata.subject}.`, m, rcanal, );
   } catch {
-    await m.reply(tradutor.texto2);
+    m.reply('✦ Ocurrio un error.');
   }
 };
-handler.command = /^autoadmin$/i;
+handler.tags = ['owner'];
+handler.help = ['autoadmin'];
+handler.command = ['autoadmin', 'tenerpoder'];
 handler.rowner = true;
 handler.group = true;
 handler.botAdmin = true;

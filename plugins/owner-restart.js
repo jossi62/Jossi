@@ -1,18 +1,25 @@
+import { spawn } from 'child_process'
+let handler = async (m, { conn, isROwner, text }) => {
 
+if (!process.send) throw '*『✦』Reiniciar: node sunlight.js*\n*『✦』Reiniciar: node index.js*'
 
-const handler = async (m, { conn, isROwner, text }) => {
-  const datas = global
-  const idioma = datas.db.data.users[m.sender].language
-  const _translate = JSON.parse(fs.readFileSync(`./language/${idioma}.json`))
-  const tradutor = _translate.plugins.owner_restart
+if (conn.user.jid == conn.user.jid) {
 
-  if (!process.send) throw tradutor.texto1;
-  // conn.readMessages([m.key])
-  await m.reply(tradutor.texto2);
-  process.send('reset');
-};
-handler.help = ['restart'];
-handler.tags = ['owner'];
-handler.command = ['restart', 'reiniciar'];
-handler.rowner = true;
-export default handler;
+const { key } = await conn.sendMessage(m.chat, {text: `🗂️ Cargando...`}, {quoted: m})
+await delay(1000 * 1)
+await conn.sendMessage(m.chat, {text: `📦 Cargando...`, edit: key})
+await delay(1000 * 1)
+await conn.sendMessage(m.chat, {text: `♻️ Cargando...`, edit: key})
+await conn.sendMessage(m.chat, {text: `*『⛏️』Comenzar reinicio completo...*`, edit: key})
+
+process.send('reset')
+} else throw 'eh'
+}
+
+handler.help = ['restart']
+handler.tags = ['owner']
+handler.command = ['restart', 'reiniciar'] 
+handler.rowner = true
+
+export default handler
+const delay = (ms) => new Promise((resolve) => setTimeout(resolve, ms))

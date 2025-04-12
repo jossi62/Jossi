@@ -1,22 +1,17 @@
+let handler = async (m, { conn, command }) => {
+  let who = m.fromMe ? conn.user.jid : m.sender
+  let user = global.db.data.users[who]
 
+  if (command === 'chetar') {
+      user.limit += 10000000 // Añadir 10,000,000 Dulces
+      user.exp += 10000000 // Añadir 10,000,000 XP
+      m.reply(`✅ ¡Se te han otorgado 10,000,000 Dulces y XP!`)
+    } else {
+    }
+  }
 
-
-const handler = async (m, { conn }) => {
-  const datas = global
-  const idioma = datas.db.data.users[m.sender].language
-  const _translate = JSON.parse(fs.readFileSync(`./language/${idioma}.json`))
-  const tradutor = _translate.plugins.owner_chetar
-
-    const user = global.db.data.users[m.sender];
-        conn.sendMessage(m.chat, {text: `*[❗] @${m.sender.split('@')[0]} ${tradutor.texto1}`, mentions: [m.sender]}, {quoted: m});
-      global.db.data.users[m.sender].money = Infinity;
-    global.db.data.users[m.sender].limit = Infinity;
-  global.db.data.users[m.sender].level = Infinity;
- global.db.data.users[m.sender].exp = Infinity;
-};
-handler.help = ['cheat'];
+handler.help = ['chetar'];
 handler.tags = ['owner'];
-handler.command = /^(ilimitado|infiniy|chetar)$/i;
-handler.rowner = true;
-handler.fail = null;
-export default handler;
+handler.command = ['chetar'];
+handler.owner = true;
+export default handler

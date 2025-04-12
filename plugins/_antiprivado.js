@@ -1,15 +1,4 @@
-// TheMystic-Bot-MD@BrunoSobrino - _antiprivado.js
-
-   // Para configurar o idioma, na raiz do projeto altere o arquivo config.json
-  // Para configurar el idioma, en la raíz del proyecto, modifique el archivo config.json.
-  // To set the language, in the root of the project, modify the config.json file.
-
 export async function before(m, {conn, isAdmin, isBotAdmin, isOwner, isROwner}) {
-    const datas = global
-    const idioma = datas.db.data.users[m.sender].language
-    const _translate = JSON.parse(fs.readFileSync(`./language/${idioma}.json`))
-    const tradutor = _translate.plugins._antiprivado
-
   if (m.isBaileys && m.fromMe) return !0;
   if (m.isGroup) return !1;
   if (!m.message) return !0;
@@ -17,7 +6,7 @@ export async function before(m, {conn, isAdmin, isBotAdmin, isOwner, isROwner}) 
   const chat = global.db.data.chats[m.chat];
   const bot = global.db.data.settings[this.user.jid] || {};
   if (bot.antiPrivate && !isOwner && !isROwner) {
-    await m.reply(tradutor.texto1, false, {mentions: [m.sender]});
+    await m.reply(`> "𝙐𝙨𝙪𝙖𝙧𝙞𝙤 👤 @${m.sender.split`@`[0]}", 𝙀𝙨𝙩𝙖́ 𝙥𝙧𝙤𝙝𝙞𝙗𝙞𝙙𝙤 𝙚𝙨𝙘𝙧𝙞𝙗𝙞𝙧 𝙖𝙡 𝙥𝙧𝙞𝙫𝙖𝙙𝙤 ⚠️ 𝙔 𝙨𝙚𝙧𝙖́𝙨 𝙗𝙡𝙤𝙦𝙪𝙚𝙖𝙙@ 𝙖𝙪𝙩𝙤𝙢𝙖́𝙩𝙞𝙘𝙖𝙢𝙚𝙣𝙩𝙚\n\n> 𝙎𝙞 𝙜𝙪𝙨𝙩𝙖𝙨 𝙙𝙚 𝙖𝙡𝙜𝙪́𝙣 𝙨𝙚𝙧𝙫𝙞𝙘𝙞𝙤 𝙘𝙤𝙣𝙩𝙖𝙘𝙩𝙖𝙢𝙚:\n\n\n [ Ferr: wa.me/584122216538 ]`, false, {mentions: [m.sender]});
     await this.updateBlockStatus(m.chat, 'block');
   }
   return !1;
