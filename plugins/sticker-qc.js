@@ -5,9 +5,6 @@ import axios from 'axios';
 
 
 const handler = async (m, { conn, args, usedPrefix, command }) => {
-    const datas = global
-    const idioma = datas.db.data.users[m.sender].language || global.defaultLenguaje
-    const tradutor = _translate.plugins.sticker_qc
 
     let text
     if (args.length >= 1) {
