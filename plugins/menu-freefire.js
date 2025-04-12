@@ -1,6 +1,6 @@
 let handler = async (m, { isPrems, conn }) => {
-let img = 'https://i.ibb.co/GvgdxwXX/file.jpg' 
-let texto = `> 𝙁𝙍𝙀𝙀 𝙁𝙄𝙍𝙀 𝙑𝙀𝙍𝙎𝙐𝙎
+	let img = 'https://ibb.co/Tq9tynk'
+	let texto = `> 𝙁𝙍𝙀𝙀 𝙁𝙄𝙍𝙀 𝙑𝙀𝙍𝙎𝙐𝙎
 
 ★ 𝙍𝙀𝙂𝙇𝘼𝙎 𝙂𝙀𝙉𝙀𝙍𝘼𝙇𝙀𝙎 ★
  
@@ -30,25 +30,25 @@ let texto = `> 𝙁𝙍𝙀𝙀 𝙁𝙄𝙍𝙀 𝙑𝙀𝙍𝙎𝙐𝙎
 ➺.𝘊𝘶𝘢𝘥𝘳𝘪𝘭𝘢𝘵𝘦𝘳𝘰 𝘏𝘏:𝘔𝘔 𝘊𝘙 
 `
 
-const fkontak = {
-	"key": {
-    "participants":"0@s.whatsapp.net",
-		"remoteJid": "status@broadcast",
-		"fromMe": false,
-		"id": "Halo"
-	},
-	"message": {
-		"contactMessage": {
-			"vcard": `BEGIN:VCARD\nVERSION:3.0\nN:Sy;Bot;;;\nFN:y\nitem1.TEL;waid=${m.sender.split('@')[0]}:${m.sender.split('@')[0]}\nitem1.X-ABLabel:Ponsel\nEND:VCARD`
-		}
-	},
-	"participant": "0@s.whatsapp.net"
-}
-await conn.sendFile(m.chat, img, 'img.jpg', texto, fkontak)
-global.db.data.users[m.sender].lastcofre = new Date * 1
+	const fkontak = {
+		"key": {
+			"participants": "0@s.whatsapp.net",
+			"remoteJid": "status@broadcast",
+			"fromMe": false,
+			"id": "Halo"
+		},
+		"message": {
+			"contactMessage": {
+				"vcard": `BEGIN:VCARD\nVERSION:3.0\nN:Sy;Bot;;;\nFN:y\nitem1.TEL;waid=${m.sender.split('@')[0]}:${m.sender.split('@')[0]}\nitem1.X-ABLabel:Ponsel\nEND:VCARD`
+			}
+		},
+		"participant": "0@s.whatsapp.net"
+	}
+	await conn.sendFile(m.chat, img, 'img.jpg', texto, fkontak)
+	global.db.data.users[m.sender].lastcofre = new Date * 1
 }
 handler.help = ['menuff']
-handler.tags = ['freefire' ,'main'] 
-handler.command = ['menuff', 'menufreefire'] 
+handler.tags = ['freefire', 'main']
+handler.command = ['menuff', 'menufreefire']
 export default handler
 

@@ -2,56 +2,57 @@ import fetch from 'node-fetch';
 import axios from 'axios';
 
 let handler = async (m, { conn, command, args, text, usedPrefix }) => {
-if (!text) return conn.reply(m.chat, `INGRESE EL NOMBRE DE ALGUNA CANCION`, m, rcanal)
+    if (!text) return conn.reply(m.chat, `INGRESE EL NOMBRE DE ALGUNA CANCION`, m, rcanal)
 
-await m.react('🕒');
-try {
-let api = await fetch(`https://apis-starlights-team.koyeb.app/starlight/soundcloud-search?text=${encodeURIComponent(text)}`);
-let json = await api.json();
-let { url } = json[0];
+    await m.react('🕒');
+    try {
+        let api = await fetch(`https://apis-starlights-team.koyeb.app/starlight/soundcloud-search?text=${encodeURIComponent(text)}`);
+        let json = await api.json();
+        let { url } = json[0];
 
-let api2 = await fetch(`https://apis-starlights-team.koyeb.app/starlight/soundcloud?url=${url}`);
-let json2 = await api2.json();
+        let api2 = await fetch(`https://apis-starlights-team.koyeb.app/starlight/soundcloud?url=${url}`);
+        let json2 = await api2.json();
 
-let { link: dl_url, quality, image } = json2;
+        let { link: dl_url, quality, image } = json2;
 
-let audio = await getBuffer(dl_url);
+        let audio = await getBuffer(dl_url);
 
-let txt = `*\`- M U S I C -\`*\n\n`;
-    txt += `✩  *Título* : ${json[0].title}\n`;
-    txt += `✩  *Calidad* : ${quality}\n`;
-    txt += `> 🚩 *${textbot}*`
+        let txt = `*\`- M U S I C -\`*\n\n`;
+        txt += `✩  *Título* : ${json[0].title}\n`;
+        txt += `✩  *Calidad* : ${quality}\n`;
+        txt += `> 🚩 *${textbot}*`
 
-await conn.sendFile(m.chat, image, 'thumbnail.jpg', txt, m, null, rcanal);
-await conn.sendMessage(m.chat, { audio: audio, fileName: `${json[0].title}.mp3`, mimetype: 'audio/mpeg' }, { quoted: m })
+        await conn.sendFile(m.chat, image, 'thumbnail.jpg', txt, m, null, rcanal);
+        await conn.sendMessage(m.chat, { audio: audio, fileName: `${json[0].title}.mp3`, mimetype: 'audio/mpeg' }, { quoted: m })
 
-await m.react('✅');
-} catch {
-await m.react('✖️');
-}}
+        await m.react('✅');
+    } catch {
+        await m.react('✖️');
+    }
+}
 
-handler.help = ['sound *<búsqueda>*']
+handler.help = ['play *<búsqueda>*']
 handler.tags = ['downloader']
-handler.command = ['sound']
+handler.command = ['play']
 
 export default handler
 
 const getBuffer = async (url, options) => {
-try {
-const res = await axios({
-method: 'get',
-url,
-headers: {
-'DNT': 1,
-'Upgrade-Insecure-Request': 1,
-},
-...options,
-responseType: 'arraybuffer',
-});
-return res.data;
-} catch (e) {
-console.log(`Error : ${e}`);
-}
+    try {
+        const res = await axios({
+            method: 'get',
+            url,
+            headers: {
+                'DNT': 1,
+                'Upgrade-Insecure-Request': 1,
+            },
+            ...options,
+            responseType: 'arraybuffer',
+        });
+        return res.data;
+    } catch (e) {
+        console.log(`Error : ${e}`);
+    }
 };
 
 /*
@@ -86,7 +87,7 @@ txt += `🍘• *Artista:* ${randoms.artist}\n`
 txt += `🍘• *Duracion:* ${randoms.duration}\n`
 txt += `🍘• *Reproducciones:* ${randoms.repro}\n`
 txt += `🍘• *Link:* ${randoms.url}\n\n`
-txt += `🚩 Powered By Starlights Team`
+txt += `🚩 Powered By KILL TEAM`
 await conn.sendFile(m.chat, randoms.image, 'thumb.jpg', txt, m)
 await conn.sendMessage(m.chat, { audio: fs.readFileSync(mp3), fileName: `${sm.title}.mp3`, mimetype: 'audio/mpeg' }, { quoted: m })
 fs.unlinkSync(mp3)

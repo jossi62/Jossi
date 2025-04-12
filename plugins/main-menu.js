@@ -12,21 +12,21 @@ let tags = {
   'sticker': 'Stickers 🏞',
   'img': 'Imágenes 📸',
   'logo': 'Logo - maker 🎨',
-  'nable': 'On / Off 📴', 
+  'nable': 'On / Off 📴',
   'downloader': 'Descargas 📥',
   'tools': 'Herramientas 🔧',
-  'search': 'Busquedas 🔎', 
+  'search': 'Busquedas 🔎',
   'rpg': 'RPG 🌠',
   'rg': 'Registro 📁',
-  'owner': 'Creador 😺', 
-  'audio': 'Audios 🔉', 
+  'owner': 'Creador 😺',
+  'audio': 'Audios 🔉',
   'anime': 'Anime 👑',
   'advanced': 'Avanzado 💠',
 }
 
 const defaultMenu = {
   before: `
-“ Hola *%name*, Te Presento el Menu de Zerway”
+“ Hola *%name*, Te Presento el Menu de KILL BOT”
 
 ⬣「 *Info User* 」⬣
 *👤 Nombre ∙* %name
@@ -37,12 +37,12 @@ const defaultMenu = {
 %readmore
 ◠◡◠◡◠◡◠◡◠◡◠◡◠◡◠◡◠◡◠◡◠◡◠◡◠◡
 
-\t\t\t*Z E R W A Y  -  M E N Ú S*
+\t\t\t*KILL BOT  -  M E N U*
 `.trimStart(),
-header: '╭──⚔️「 *%category* 」⚡',
-body: '│  👑◦ *%cmd*\n',
-footer: '╰──📍\n',
-after: '',
+  header: '╭──⚔️「 *%category* 」⚡',
+  body: '│  👑◦ *%cmd*\n',
+  footer: '╰──📍\n',
+  after: '',
 }
 
 let handler = async (m, { conn, usedPrefix: _p, __dirname }) => {
@@ -142,8 +142,8 @@ let handler = async (m, { conn, usedPrefix: _p, __dirname }) => {
       readmore: readMore
     }
     text = text.replace(new RegExp(`%(${Object.keys(replace).sort((a, b) => b.length - a.length).join`|`})`, 'g'), (_, name) => '' + replace[name])
-    
-    let pp = './src/img/siskedurl.jpg'
+
+    let pp = './src/img/KILLBOT.jpg'
     await conn.sendFile(m.chat, pp, 'thumbnail.jpg', text.trim(), m, null, rcanal)
 
   } catch (e) {
@@ -154,7 +154,7 @@ let handler = async (m, { conn, usedPrefix: _p, __dirname }) => {
 
 handler.help = ['menu']
 handler.tags = ['main']
-handler.command = ['menu', 'help', 'menú', 'comandos', 'allmenu', 'menucompleto', 'funciones']  
+handler.command = ['menu', 'help', 'menú', 'comandos', 'allmenu', 'menucompleto', 'funciones']
 export default handler
 
 const more = String.fromCharCode(8206)

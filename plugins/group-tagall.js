@@ -1,4 +1,4 @@
-const handler = async (m, {isOwner, isAdmin, conn, text, participants, args, command}) => {
+const handler = async (m, { isOwner, isAdmin, conn, text, participants, args, command }) => {
   if (!(isAdmin || isOwner)) {
     global.dfail('admin', m, conn);
     throw false;
@@ -9,15 +9,15 @@ const handler = async (m, {isOwner, isAdmin, conn, text, participants, args, com
     var member = 0;
   }
   const pesan = args.join` `;
-  const oi = `${pesan}`;
-  let teks = `𝙕𝙚𝙧𝙬𝙖𝙮𝘽𝙤𝙩\n\nhttps://chat.whatsapp.com/IkYunjDlaPT3rs4nsBY59Y\n\n *Integrantes :  ${participants.length}* ${oi}\n\n┌──⭓ Despierten Plantas 🌱\n`;
+  const oi = `*𝙀𝙏𝙄𝙌𝙐𝙀𝙏𝘼𝙎:* ${pesan}`;
+  let teks = `*> Tʜᴇ Sᴜɴ Is Bʀɪɢʜᴛ Bᴜᴛ Nᴏᴛ As Bʀɪɢʜᴛ As Mᴇ ☀️*\n\n *${oi}\n\n➥ _*@ineffable.mvrco:*_\n`;
   for (const mem of participants) {
-    teks += `📍 @${mem.id.split('@')[0]}\n`;
+    teks += `*🥷🏼 ⇝* @${mem.id.split('@')[0]}\n`;
   }
-  teks += `└───────⭓`;
-  conn.sendMessage(m.chat, {text: teks, mentions: participants.map((a) => a.id)} );
+  teks += `*└KɪʟʟBᴏᴛ ⇝@ineffable.mvrco*`;
+  conn.sendMessage(m.chat, { text: teks, mentions: participants.map((a) => a.id) });
 };
-handler.help = ['todos'];
+handler.help = ['tagall <mesaje>', 'invocar <mesaje>'];
 handler.tags = ['group'];
 handler.command = /^(tagall|invocar|marcar|todos|invocación|ta)$/i;
 handler.admin = true;

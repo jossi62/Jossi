@@ -1,41 +1,23 @@
-import {generateWAMessageFromContent} from '@whiskeysockets/baileys';
-import * as fs from 'fs';
-const handler = async (m, {conn, text, participants, isOwner, isAdmin}) => {
-  try {
-    const users = participants.map((u) => conn.decodeJid(u.id));
-    const q = m.quoted ? m.quoted : m || m.text || m.sender;
-    const c = m.quoted ? await m.getQuotedObj() : m.msg || m.text || m.sender;
-    const msg = conn.cMod(m.chat, generateWAMessageFromContent(m.chat, {[m.quoted ? q.mtype : 'extendedTextMessage']: m.quoted ? c.message[q.mtype] : {text: '' || c}}, {quoted: m, userJid: conn.user.id}), text || q.text, conn.user.jid, {mentions: users});
-    await conn.relayMessage(m.chat, msg.message, {messageId: msg.key.id});
-  } catch {
-
-    const users = participants.map((u) => conn.decodeJid(u.id));
-    const quoted = m.quoted ? m.quoted : m;
-    const mime = (quoted.msg || quoted).mimetype || '';
-    const isMedia = /image|video|sticker|audio/.test(mime);
-    const more = String.fromCharCode(8206);
-    const masss = more.repeat(850);
-    const htextos = `${text ? text : '*𝚉𝚎𝚛𝚠𝚊𝚢*'}`;
-    if ((isMedia && quoted.mtype === 'imageMessage') && htextos) {
-      var mediax = await quoted.download?.();
-      conn.sendMessage(m.chat, {image: mediax, mentions: users, caption: htextos, mentions: users}, {quoted: m});
-    } else if ((isMedia && quoted.mtype === 'videoMessage') && htextos) {
-      var mediax = await quoted.download?.();
-      conn.sendMessage(m.chat, {video: mediax, mentions: users, mimetype: 'video/mp4', caption: htextos}, {quoted: m});
-    } else if ((isMedia && quoted.mtype === 'audioMessage') && htextos) {
-      var mediax = await quoted.download?.();
-      conn.sendMessage(m.chat, {audio: mediax, mentions: users, mimetype: 'audio/mpeg', fileName: `Hidetag.mp3`}, {quoted: m});
-    } else if ((isMedia && quoted.mtype === 'stickerMessage') && htextos) {
-      var mediax = await quoted.download?.();
-      conn.sendMessage(m.chat, {sticker: mediax, mentions: users}, {quoted: m});
-    } else {
-      await conn.relayMessage(m.chat, {extendedTextMessage: {text: `${masss}\n${htextos}\n`, ...{contextInfo: {mentionedJid: users, externalAdReply: {thumbnail: 'https://qu.ax/jYQH.jpg', sourceUrl: 'https://whatsapp.com/channel/0029Vak6H9l3GJP4FJH5063R'}}}}}, {});
+//Código desarollado por Semi, https://wa.me/56983073328)
+let handler = async (m, { conn, text, participants }) => {
+  const mime = m.mtype
+  const type = /imageMessage|videoMessage|conversation|extendedTextMessage/.test(mime)
+  if (!m.quoted && type) {
+    if ((mime === 'imageMessage')) {
+      conn.sendMessage(m.chat, { image: await m.download?.(), mentions: participants.map(u => conn.decodeJid(u.id)), caption: text ? text : "", mentions: participants.map(u => conn.decodeJid(u.id)) }, { quoted: m });
+    } else if ((mime === 'videoMessage')) {
+      conn.sendMessage(m.chat, { video: await m.download?.(), mentions: participants.map(u => conn.decodeJid(u.id)), mimetype: 'video/mp4', caption: text ? text : "" }, { quoted: m })
+    } else if ((mime === ("conversation") || ("extendedTextMessage"))) {
+      conn.sendMessage(m.chat, { text: text ? text : "@ineffable.mvrco", mentions: participants.map(u => conn.decodeJid(u.id)) }, { quoted: m })
     }
+  } else if (m.quoted) {
+    await conn.sendMessage(m.chat, { forward: m.quoted.fakeObj, mentions: participants.map(u => conn.decodeJid(u.id)) }, { quoted: m })
   }
-};
-handler.help = ['hidetag']
-handler.tags = ['group']
-handler.command = /^(hidetag|notify|notificar|noti|n|hidetah|hidet)$/i;
-handler.group = true;
-handler.admin = true;
-export default handler;
+}
+handler.help = ['notify', 'hidetag']
+handler.tags = ['adm']
+handler.command = ['hidetag', 'notify', 'n', 'noti', 'notificar', 'notif', 'aviso', 'avisar',]
+handler.group = true
+handler.admin = true
+
+export default handler
