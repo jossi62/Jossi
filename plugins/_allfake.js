@@ -58,7 +58,7 @@ handler.all = async function (m) {
     global.waitttt = '🚀 Cargando...'
 
     //Enlaces
-    var canal = 'https://chat.whatsapp.com/IAHpXVSTVbC7xk17kAqRzo'
+    var canal = 'https://www.whatsapp.com/channel/0029Vb4TKBCD38CNEkfHdj1z'
     var tiktok = 'https://www.tiktok.com/@ineffable.mvrco'
     var ig = 'https://www.instagram.com/ineffable.mvrco'
     let correo = 'tummperra@gmail.com'

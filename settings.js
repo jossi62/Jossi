@@ -35,6 +35,7 @@ global.APIs = {
     'https://api.fgmods.xyz': 'm2XBbNvz' //-- 100 de límite diario --- Regístrese en https://api.fgmods.xyz/
   }
 
+
 //*─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─*
 
 //cambiar a true si el bot detecta sus propios comandos.
@@ -65,8 +66,8 @@ global.avatar = fs.readFileSync('./src/img/avatar_contact.png')
 //*─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─*
 
 global.grupo = 'https://chat.whatsapp.com/IAHpXVSTVbC7xk17kAqRzo'
-global.channel = 'https://chat.whatsapp.com/FQhAChRgh2P84YJsHQuWlw'
-global.channel2 = 'https://chat.whatsapp.com/FQhAChRgh2P84YJsHQuWlw'
+global.channel = 'https://www.whatsapp.com/channel/0029Vb4TKBCD38CNEkfHdj1z'
+global.channel2 = 'https://www.whatsapp.com/channel/0029Vb4TKBCD38CNEkfHdj1z'
 global.md = 'https://wa.me/56983073328'
 global.ig = 'https://www.instagram.com/ineffable.mvrco'
 global.tiktok = 'https://www.tiktok.com/@ineffable.mvrco'
