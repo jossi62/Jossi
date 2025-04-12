@@ -502,7 +502,7 @@ global.dfail = (type, m, conn) => {
         unreg: `🤚🏻 Espera, Para Usar Este Comando Debes Estar *Registrado.*\n\nUtiliza: */reg nombre.edad*\n\n> Ejemplo: /reg KILL BOT.17`,
         restrict: `⚠️ Esta Característica Está *Deshabilitada.*`
     }[type];
-    if (msg) return conn.reply(m.chat, msg, m, rcanal).then(_ => m.react('✖️'))
+    if (msg) return conn.reply(m.chat, msg, m).then(_ => m.react('✖️'))
 }
 
 let file = global.__filename(import.meta.url, true)
