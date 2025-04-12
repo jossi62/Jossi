@@ -11,7 +11,7 @@ import moment from 'moment-timezone'
 
 //Si quiere evitar escribir el número que será bot en la consola, agregué desde aquí entonces:
 //Sólo aplica para opción 2 (ser bot con código de texto de 8 digitos)
-global.botNumberCode = '' //Ejemplo: +573218138672
+global.botNumberCode = '' //Ejemplo: +56983073328
 global.confirmCode = ''
 
 //*─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─*
@@ -65,8 +65,8 @@ global.avatar = fs.readFileSync('./src/img/avatar_contact.png')
 //*─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─*
 
 global.grupo = 'https://chat.whatsapp.com/IAHpXVSTVbC7xk17kAqRzo'
-global.channel = 'https://chat.whatsapp.com/IAHpXVSTVbC7xk17kAqRzo'
-global.channel2 = 'https://chat.whatsapp.com/IAHpXVSTVbC7xk17kAqRzo'
+global.channel = 'https://chat.whatsapp.com/FQhAChRgh2P84YJsHQuWlw'
+global.channel2 = 'https://chat.whatsapp.com/FQhAChRgh2P84YJsHQuWlw'
 global.md = 'https://wa.me/56983073328'
 global.ig = 'https://www.instagram.com/ineffable.mvrco'
 global.tiktok = 'https://www.tiktok.com/@ineffable.mvrco'
