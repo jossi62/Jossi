@@ -2,7 +2,7 @@ import fetch from 'node-fetch';
 import axios from 'axios';
 
 let handler = async (m, { conn, command, args, text, usedPrefix }) => {
-    if (!text) return conn.reply(m.chat, `INGRESE EL NOMBRE DE ALGUNA CANCION`, m, rcanal)
+    if (!text) return conn.reply(m.chat, `INGRESE EL NOMBRE DE ALGUNA CANCION`, m)
 
     await m.react('🕒');
     try {
@@ -22,7 +22,7 @@ let handler = async (m, { conn, command, args, text, usedPrefix }) => {
         txt += `✩  *Calidad* : ${quality}\n`;
         txt += `> 🚩 *${textbot}*`
 
-        await conn.sendFile(m.chat, image, 'thumbnail.jpg', txt, m, null, rcanal);
+        await conn.sendFile(m.chat, image, 'thumbnail.jpg', txt, m, null);
         await conn.sendMessage(m.chat, { audio: audio, fileName: `${json[0].title}.mp3`, mimetype: 'audio/mpeg' }, { quoted: m })
 
         await m.react('✅');
@@ -65,7 +65,7 @@ import fs from 'fs'
 import nodeID3 from 'node-id3'
 
 let handler = async (m, { conn, text, usedPrefix, command }) => {
-if (!text) return conn.reply(m.chat, `🚩 Ingrese el nombre de la cancion de *Soundcloud.*`, m, rcanal)
+if (!text) return conn.reply(m.chat, `🚩 Ingrese el nombre de la cancion de *Soundcloud.*`, m)
 await m.react('🕓')
 try {
 let { data: results } = await axios.get(`https://apis-starlights-team.koyeb.app/starlight/soundcloud-search?text=${text}`, { headers: { 'Content-Type': 'application/json' } })
