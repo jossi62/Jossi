@@ -40,7 +40,7 @@ const defaultMenu = {
 \t\t\t*GHOSTBOT  -  M E N U*
 `.trimStart(),
   header: '╭──⚔️「 *%category* 」⚡',
-  body: '│  👑◦ *%cmd*\n',
+  body: '│  ⭐◦ *%cmd*\n',
   footer: '╰──📍\n',
   after: '',
 }
