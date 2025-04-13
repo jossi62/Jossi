@@ -26,7 +26,7 @@ let tags = {
 
 const defaultMenu = {
   before: `
-“ Hola *%name*, Te Presento el Menu de KILL BOT”
+“ Hola *%name*, Te Presento el Menu de GHOSTBOT”
 
 ⬣「 *Info User* 」⬣
 *👤 Nombre ∙* %name
@@ -37,7 +37,7 @@ const defaultMenu = {
 %readmore
 ◠◡◠◡◠◡◠◡◠◡◠◡◠◡◠◡◠◡◠◡◠◡◠◡◠◡
 
-\t\t\t*KILL BOT  -  M E N U*
+\t\t\t*GHOSTBOT  -  M E N U*
 `.trimStart(),
   header: '╭──⚔️「 *%category* 」⚡',
   body: '│  👑◦ *%cmd*\n',
@@ -143,7 +143,7 @@ let handler = async (m, { conn, usedPrefix: _p, __dirname }) => {
     }
     text = text.replace(new RegExp(`%(${Object.keys(replace).sort((a, b) => b.length - a.length).join`|`})`, 'g'), (_, name) => '' + replace[name])
 
-    let pp = './src/img/KILLBOT.jpg'
+    let pp = './src/img/GHOSTBOT.jpg'
     await conn.sendFile(m.chat, pp, 'thumbnail.jpg', text.trim(), m, null)
 
   } catch (e) {

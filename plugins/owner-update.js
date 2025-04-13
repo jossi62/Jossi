@@ -19,7 +19,7 @@ var handler = async (m, { conn, text }) => {
 
             if (status.length > 0) {
                 const conflictedFiles = status.toString().split('\n').filter(line => line.trim() !== '').map(line => {
-                    if (line.includes('.npm/') || line.includes('.cache/') || line.includes('tmp/') || line.includes('KILLBOTSession/') || line.includes('npm-debug.log')) {
+                    if (line.includes('.npm/') || line.includes('.cache/') || line.includes('tmp/') || line.includes('GHOSTBOTSession/') || line.includes('npm-debug.log')) {
                         return null
                     }
                     return '*→ ' + line.slice(3) + '*'

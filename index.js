@@ -24,7 +24,7 @@ for (const key in collaborators) {
     }
 }
 activeCollaborators = activeCollaborators.slice(0, -2);
-cfonts.say('Zer\nWay', {
+cfonts.say('GHO\nST', {
     align: 'center',
     gradient: ['red', 'blue']
 })
@@ -82,4 +82,4 @@ process.on('warning', (warning) => {
         console.warn(warning.stack)
     }
 })
-start('KILLBOT.js')
+start('GHOSTBOT.js')
