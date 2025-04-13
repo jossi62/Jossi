@@ -21,7 +21,6 @@ let tags = {
   'owner': 'Creador 😺',
   'audio': 'Audios 🔉',
   'anime': 'Anime 👑',
-  'advanced': 'Avanzado 💠',
 }
 
 const defaultMenu = {
@@ -35,13 +34,13 @@ const defaultMenu = {
 *⭐ Nivel ∙* %level
 
 %readmore
-◠◡◠◡◠◡◠◡◠◡◠◡◠◡◠◡◠◡◠◡◠◡◠◡◠◡
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯
 
 \t\t\t*GHOSTBOT  -  M E N U*
 `.trimStart(),
-  header: '╭──⚔️「 *%category* 」⚡',
-  body: '│  ⭐◦ *%cmd*\n',
-  footer: '╰──📍\n',
+  header: '*╭━〔 *%category* 〕━╮*',
+  body: '│  ➔⭐◦ *%cmd*\n',
+  footer: '╭━〔📍\n',
   after: '',
 }
 
