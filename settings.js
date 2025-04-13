@@ -60,7 +60,7 @@ global.textbot = 'GHOSTBOT'
 //*─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─*
 
 global.catalogo = fs.readFileSync('./src/img/catalogo.jpg')
-global.siskedurl = fs.readFileSync('./src/img/GHOSTBOT.jpg')
+global.GHOSTBOTurl = fs.readFileSync('./src/img/GHOSTBOT.jpg')
 global.avatar = fs.readFileSync('./src/img/avatar_contact.png')
 
 //*─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─*
