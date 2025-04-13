@@ -22,7 +22,8 @@ let handler = async (m, { conn, command, args, text, usedPrefix }) => {
         txt += `✩  *Calidad* : ${quality}\n`;
         txt += `> 🚩 *${textbot}*`
 
-        await conn.sendFile(m.chat, image, 'thumbnail.jpg', txt, m, null);
+        await conn.sendFile(m.chat, image, 'thumbnail.jpg', txt, m
+        );
         await conn.sendMessage(m.chat, { audio: audio, fileName: `${json[0].title}.mp3`, mimetype: 'audio/mpeg' }, { quoted: m })
 
         await m.react('✅');
