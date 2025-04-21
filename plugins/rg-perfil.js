@@ -30,7 +30,7 @@ let handler = async (m, { conn, usedPrefix, command }) => {
 
   let { min, xp, max } = xpRange(user.level, global.multiplier)
 
-  let pp = await conn.profilePictureUrl(who, 'image').catch(_ => 'https://ibb.co/bg201P59')
+  let pp = await conn.profilePictureUrl(who, 'image').catch(_ => 'https://ibb.co/GvRWPQbs')
 
   let img = await (await fetch(`${pp}`)).buffer()
 
