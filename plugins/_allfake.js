@@ -97,9 +97,9 @@ handler.all = async function (m) {
     }, { quoted: m }
 
     global.icono = [
-        'https://ibb.co/GvRWPQbs',
-        'https://ibb.co/GvRWPQbs',
-        'https://ibb.co/GvRWPQbs'
+        'https://qu.ax/ZAyVQ.jpg',
+        'https://qu.ax/ZAyVQ.jpg',
+        'https://qu.ax/ZAyVQ.jpg'
     ].getRandom()
 
 }
