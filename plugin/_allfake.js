@@ -44,7 +44,7 @@ handler.all = async function (m) {
     global.done = '✅'
     global.error = '✖️'
 
-    //Emojis determinado de Sisked Bot
+    //Emojis determinado de KILLBOT Bot
     global.emoji = '🍁'
     global.emoji2 = '⭐'
     global.emoji3 = '✨️'

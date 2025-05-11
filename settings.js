@@ -47,7 +47,7 @@ global.libreria = 'Baileys'
 global.baileys = '@whiskeysockets/baileys'
 global.vs = '2.0.7'
 global.languaje = 'Español'
-global.nameqr = 'Sisked-x'
+global.nameqr = 'KILLBOT-x'
 global.namebot = '@𝖎𝖓𝖊𝖋𝖋𝖆𝖇𝖑𝖊.𝖒𝖛𝖗𝖈𝖔'
 global.sessions = 'KILLSession'
 global.jadi = 'KILLBOTJadiBot'
@@ -64,7 +64,7 @@ global.textbot = '𝘞𝘩𝘢𝘵𝘴𝘈𝘱𝘱 @𝖎𝖓𝖊𝖋𝖋𝖆𝖇
 //*─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─*
 
 global.catalogo = fs.readFileSync('./src/img/catalogo.jpg')
-global.siskedurl = fs.readFileSync('./src/img/siskedurl.jpg')
+global.KILLBOTurl = fs.readFileSync('./src/img/KILLBOTurl.jpg')
 global.avatar = fs.readFileSync('./src/img/avatar_contact.png')
 
 //*─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─*
