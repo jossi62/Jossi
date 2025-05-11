@@ -2,7 +2,7 @@ import { canLevelUp, xpRange } from '../lib/levelling.js'
 import fetch from 'node-fetch'
 
 let handler = async (m, { conn }) => {
-    let img = await (await fetch(`https://ibb.co/WWMRYS6z`)).buffer()
+    let img = await (await fetch(`https://i.ibb.co/5J92sdw/2128692aea2349ef98c933fa6ce10ed6.jpg`)).buffer()
     let name = conn.getName(m.sender)
     let user = global.db.data.users[m.sender]
     if (!canLevelUp(user.level, user.exp, global.multiplier)) {
@@ -17,12 +17,12 @@ let handler = async (m, { conn }) => {
     while (canLevelUp(user.level, user.exp, global.multiplier)) user.level++
     if (before !== user.level) {
         let txt = `🎊 F E L I C I T A C I O N E S 🎊\n\n`
-        txt += `*${before}* ➔ *${user.level}* [ ${user.role} ]\n\n`
+        txt += `*${before}* ➔ *${user.level}* \n\n`
         txt += `• 🌟 Nivel anterior : ${before}\n`
         txt += `• 🌟 Nuevo nivel : ${user.level}\n`
         txt += `• 📅 Fecha : ${new Date().toLocaleString('id-ID')}\n\n`
         txt += `🚩 *Nota:* _Cuanto más a menudo interactúes con *KILLBOT-Bot*, mayor será tu nivel_`
-        await conn.sendFile(m.chat, img, 'thumbnail.jpg', txt, m, null,)
+        await conn.sendFile(m.chat, img, 'thumbnail.jpg', txt, m, null)
     }
 }
 

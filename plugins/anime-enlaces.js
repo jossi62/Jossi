@@ -1,6 +1,6 @@
 var handler = async m =>
 
-    conn.reply(m.chat, ` 
+    conn.reply(m.chat` 
 ┏━━━━━━━━━━━━━━━━━━━━┅
 ┇                   *「 ANIME」*       
 ┣━━━━━━━━━━━━━━━━━━━━┅
@@ -16,7 +16,7 @@ var handler = async m =>
 ┃ ❖ https://pendekarsubs.us
 ┃ ❖ https://myanimelist.net
 ┗━━━━━━━━━━━━━━━━━━━━┅
- `, m, ,)
+ `, m,)
 
 handler.help = ['animelink']
 handler.tags = ['anime']

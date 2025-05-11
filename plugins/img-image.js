@@ -1,6 +1,6 @@
 import { googleImage } from '@bochilteam/scraper';
 const handler = async (m, { conn, text, usedPrefix, command }) => {
-    if (!text) return conn.reply(m.chat, `*⚠️ Uso Correcto: ${usedPrefix + command} Extrella dorada*`, m,);
+    if (!text) return conn.reply(m.chat, `*⚠️ Uso Correcto: ${usedPrefix + command} Extrella dorada*`, m);
     conn.reply(m.chat, '🦋 *Descargando su imagen...*', m, {
         contextInfo: {
             externalAdReply: {

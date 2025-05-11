@@ -403,7 +403,7 @@ let handler = async (m, { isPrems, conn }) => {
       },
       "participant": "0@s.whatsapp.net"
    }
-   await conn.sendFile(m.chat, img, 'img.jpg', texto, m, null, , fkontak)
+   await conn.sendFile(m.chat, img, 'img.jpg', texto, m, null, fkontak)
    global.db.data.users[m.sender].lastcofre = new Date * 1
 }
 

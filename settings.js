@@ -49,7 +49,7 @@ global.vs = '2.0.7'
 global.languaje = 'Español'
 global.nameqr = 'Sisked-x'
 global.namebot = '@𝖎𝖓𝖊𝖋𝖋𝖆𝖇𝖑𝖊.𝖒𝖛𝖗𝖈𝖔'
-global.sessions = 'KILLSession'
+global.sessions = 'KILLBOTSession'
 global.jadi = 'KILLBOTJadiBot'
 
 //*─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─*
