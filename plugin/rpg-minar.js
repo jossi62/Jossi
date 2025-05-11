@@ -11,12 +11,12 @@ let handler = async (m, { conn }) => {
   }
 
   global.db.data.users[m.sender].limit += amount
-  await m.reply(`Genial! minaste *${amount} 🍬 Dulces*`)
+  await m.reply(`Genial! minaste *${amount} 🪙 Creds*`)
   cooldowns[m.sender] = Date.now()
 }
 handler.help = ['minar']
 handler.tags = ['rpg']
-handler.command = ['minar', 'miming', 'mine']  
+handler.command = ['minar', 'miming', 'mine']
 export default handler
 
 function segundosAHMS(segundos) {

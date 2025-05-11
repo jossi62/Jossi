@@ -19,7 +19,7 @@ let handler = async (m) => {
   let mensaje = 'Las mascotas cuestan:\n';
 
   for (let mascota in mascotaPrecios) {
-    mensaje += `- *${mascota}*: ${mascotaPrecios[mascota]} 🍬 Dulces\n`;
+    mensaje += `- *${mascota}*: ${mascotaPrecios[mascota]} 🪙 Creds\n`;
   }
 
   // Envia el mensaje con los precios

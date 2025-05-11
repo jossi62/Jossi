@@ -1,7 +1,7 @@
 let handler = async (m, { isPrems, conn }) => {
-m.react('👾')
-let img = 'https://qu.ax/Ghdtl.jpg' 
-let texto = `
+   m.react('👾')
+   let img = 'https://qu.ax/LvMCb.jpg'
+   let texto = `
 🪙 𝐌 𝐔 𝐋 𝐓 𝐈 - 𝐌 𝐄 𝐍 𝐔́ 
 
       「 *📚 𝘐𝘯𝘧𝘰 📚* 」  
@@ -369,8 +369,8 @@ let texto = `
 ┣━━━━━━━━━━━━━━┫  
 ┃⋗ 💼 *.claim*  
 ┃⋗ 💼 *.crimen*  
-┃⋗ 🍬 *.dardulces *@user <cantidad>*  
-┃⋗ 🍬 *.dulces*  
+┃⋗ 🪙 *.darCreds *@user <cantidad>*  
+┃⋗ 🪙 *.Creds*  
 ┃⋗ ⚡ *.levelup*  
 ┃⋗ ⛏️ *.minar*  
 ┃⋗ 🛍️ *.Buy*  
@@ -387,25 +387,25 @@ let texto = `
 ┃⋗ 📝 *.unreg*  
 ┗━━━━━━━━━━━━━━┛
 
-> 𝙕𝙚𝙧𝙬𝙖𝙮𝘽𝙤𝙩`
+> @𝖎𝖓𝖊𝖋𝖋𝖆𝖇𝖑𝖊.𝖒𝖛𝖗𝖈𝖔`
 
-const fkontak = {
-	"key": {
-    "participants":"0@s.whatsapp.net",
-		"remoteJid": "status@broadcast",
-		"fromMe": false,
-		"id": "Halo"
-	},
-	"message": {
-		"contactMessage": {
-			"vcard": `BEGIN:VCARD\nVERSION:3.0\nN:Sy;Bot;;;\nFN:y\nitem1.TEL;waid=${m.sender.split('@')[0]}:${m.sender.split('@')[0]}\nitem1.X-ABLabel:Ponsel\nEND:VCARD`
-		}
-	},
-	"participant": "0@s.whatsapp.net"
-}
-await conn.sendFile(m.chat, img, 'img.jpg', texto, m, null, rcanal, fkontak)
-global.db.data.users[m.sender].lastcofre = new Date * 1
+   const fkontak = {
+      "key": {
+         "participants": "0@s.whatsapp.net",
+         "remoteJid": "status@broadcast",
+         "fromMe": false,
+         "id": "Halo"
+      },
+      "message": {
+         "contactMessage": {
+            "vcard": `BEGIN:VCARD\nVERSION:3.0\nN:Sy;Bot;;;\nFN:y\nitem1.TEL;waid=${m.sender.split('@')[0]}:${m.sender.split('@')[0]}\nitem1.X-ABLabel:Ponsel\nEND:VCARD`
+         }
+      },
+      "participant": "0@s.whatsapp.net"
+   }
+   await conn.sendFile(m.chat, img, 'img.jpg', texto, m, null, rcanal, fkontak)
+   global.db.data.users[m.sender].lastcofre = new Date * 1
 }
 
-handler.command = ['menu', 'menú', 'multimenu', 'help', 'comandos', 'ayuda'] 
+handler.command = ['menu', 'menú', 'multimenu', 'help', 'comandos', 'ayuda']
 export default handler

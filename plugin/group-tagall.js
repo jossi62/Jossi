@@ -1,54 +1,25 @@
-const handler = async (m, { isOwner, isAdmin, conn, text, participants, args }) => {
-  let chat = global.db.data.chats[m.chat];
-
+const handler = async (m, { isOwner, isAdmin, conn, text, participants, args, command }) => {
   if (!(isAdmin || isOwner)) {
     global.dfail('admin', m, conn);
     throw false;
+    var sum = member.length;
+  } else {
+    var sum = 0;
+    const total = 0;
+    var member = 0;
   }
-
-  const emoji = global.db.data.chats[m.chat]?.emojiTag || '🌿';
-  const countryFlags = {
-    '52': '🇲🇽', '57': '🇨🇴', '54': '🇦🇷', '34': '🇪🇸', '55': '🇧🇷',
-    '1': '🇺🇸', '44': '🇬🇧', '91': '🇮🇳', '502': '🇬🇹', '56': '🇨🇱',
-    '51': '🇵🇪', '58': '🇻🇪', '505': '🇳🇮', '593': '🇪🇨', '504': '🇭🇳',
-    '591': '🇧🇴', '53': '🇨🇺', '503': '🇸🇻', '507': '🇵🇦', '595': '🇵🇾'
-  };
-
-    const getCountryFlag = (id) => {
-    const phoneNumber = id.split('@')[0];
-    const prefixes = [3, 2, 1];
-
-    for (const length of prefixes) {
-      const phonePrefix = phoneNumber.slice(0, length);
-      if (countryFlags[phonePrefix]) return countryFlags[phonePrefix];
-    }
-
-    return '🏁';
-  };
-
   const pesan = args.join` `;
-  const groupMetadata = await conn.groupMetadata(m.chat);
-  const groupName = groupMetadata.subject;
-  let teks = `*${groupName}*\n\nhttps://chat.whatsapp.com/IkYunjDlaPT3rs4nsBY59Y\n`;
-  teks += `𝙈𝙞𝙚𝙢𝙗𝙧𝙤𝙨: *${participants.length}*\n`;
-  teks += `${pesan}\n┌──⭓ 𝙇𝙞𝙨𝙩𝙖\n`;
-
+  const oi = `𝙀𝙏𝙄𝙌𝙐𝙀𝙏𝘼𝙎:* ${pesan}`;
+  let teks = `*> Tʜᴇ Sᴜɴ Is Bʀɪɢʜᴛ Bᴜᴛ Nᴏᴛ As Bʀɪɢʜᴛ As Mᴇ ☀️*\n\n *${oi}\n\n➥ _*@ineffable.mvrco:*_\n`;
   for (const mem of participants) {
-    const flagOrEmoji = emoji === '🏁' ? getCountryFlag(mem.id) : emoji;
-    teks += `${flagOrEmoji} @${mem.id.split('@')[0]}\n`;
+    teks += `*🥷🏼 ⇝* @${mem.id.split('@')[0]}\n`;
   }
-
-  teks += `└───────⭓\n\n> 𝙕𝙚𝙧𝙬𝙖𝙮𝘽𝙤𝙩`;
-  await conn.sendMessage(m.chat, { 
-    text: teks,
-    mentions: participants.map((a) => a.id)
-  });
+  teks += `*└KɪʟʟBᴏᴛ ⇝@ineffable.mvrco*`;
+  conn.sendMessage(m.chat, { text: teks, mentions: participants.map((a) => a.id) });
 };
-
-handler.help = ['tagall', 'todos'];
+handler.help = ['tagall <mesaje>', 'invocar <mesaje>'];
 handler.tags = ['group'];
-handler.command = /^(tagall|invocar|todos|invocación)$/i;
+handler.command = /^(tagall|invocar|marcar|todos|invocación|ta)$/i;
 handler.admin = true;
 handler.group = true;
-
 export default handler;

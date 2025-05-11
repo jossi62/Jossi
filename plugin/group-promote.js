@@ -1,4 +1,4 @@
-let handler = async (m, {conn, usedPrefix, text}) => {
+let handler = async (m, { conn, usedPrefix, text }) => {
   if (isNaN(text) && !text.match(/@/g)) {
   } else if (isNaN(text)) {
     var number = text.split`@`[1];
@@ -9,7 +9,7 @@ let handler = async (m, {conn, usedPrefix, text}) => {
   if (!text && !m.quoted)
     return conn.reply(
       m.chat,
-      '🚩 Use el comandó correctamente\n\n`Ejemplo :`\n\n> . promote @Zerwaybot',
+      '🚩 Use el comandó correctamente\n\n`Ejemplo :`\n\n> . promote @KILLBOTbot',
       m
     );
   if (number.length > 13 || (number.length < 11 && number.length > 0))

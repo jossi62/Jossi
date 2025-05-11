@@ -30,20 +30,20 @@ async function verificarVidaYAlimentarMascota(conn) {
       // Aumentar la vida de la mascota a 100
       user.vida = 100;
 
-      // Restar 10 dulces por el cuidado de la mascota
+      // Restar 10 Creds por el cuidado de la mascota
       if (user.limit < 10) {
-        // Si no tiene suficientes dulces, avisar
-        let mensaje = `⚠️ *No tienes suficientes dulces para que tu empleado cuide a tu mascota. Necesitas 10 dulces.*`;
+        // Si no tiene suficientes Creds, avisar
+        let mensaje = `⚠️ *No tienes suficientes Creds para que tu empleado cuide a tu mascota. Necesitas 10 Creds.*`;
         let chatDestino = user.grupo || userId;
         await conn.sendMessage(chatDestino, { text: mensaje });
         continue;
       }
 
-      // Restar 10 dulces por el cuidado
+      // Restar 10 Creds por el cuidado
       user.limit -= 10;
 
       // Enviar mensaje confirmando que el empleado alimentó a la mascota
-      let mensaje = `✅ *Tu empleado alimentó a tu mascota y la cuidó. Ha recuperado toda su vida.*\n💰 *Te he cobrado 10 dulces por sus cuidados.*`;
+      let mensaje = `✅ *Tu empleado alimentó a tu mascota y la cuidó. Ha recuperado toda su vida.*\n💰 *Te he cobrado 10 Creds por sus cuidados.*`;
       let chatDestino = user.grupo || userId;
       await conn.sendMessage(chatDestino, { text: mensaje });
     }
