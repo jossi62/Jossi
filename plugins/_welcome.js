@@ -19,7 +19,7 @@ const fetchWithTimeout = async (url, timeout = 5000) => {
 export async function before(m, { conn, participants, groupMetadata }) {
   if (!m.messageStubType || !m.isGroup) return !0;
 
-  let pp = 'https://qu.ax/jYQH.jpg'; // Imagen por defecto si no se obtiene la imagen de perfil
+  let pp = 'https://i.ibb.co/1tqw7YW3/Tenamore.jpg'; // Imagen por defecto si no se obtiene la imagen de perfil
   let img;
 
   try {
@@ -28,7 +28,7 @@ export async function before(m, { conn, participants, groupMetadata }) {
     img = await fetchWithTimeout(pp); // Usamos la función con tiempo de espera
   } catch (error) {
     console.error('Error al obtener la imagen de perfil:', error);
-    img = await fetchWithTimeout('https://qu.ax/jYQH.jpg'); // Si falla, usamos la imagen predeterminada
+    img = await fetchWithTimeout('https://i.ibb.co/1tqw7YW3/Tenamore.jpg'); // Si falla, usamos la imagen predeterminada
   }
 
   let chat = global.db.data.chats[m.chat];
