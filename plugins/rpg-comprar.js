@@ -29,7 +29,7 @@ const handler = async (m, { conn, command, args }) => {
 *Creds Gastados*: -${CredsPorComida * count} 🪙
 
 Gracias Por Su Compra Vuelva Pronto 😇
-> @𝐙𝐞𝐫𝐰𝐚𝐲 - 𝐁𝐨𝐭 - 𝟐𝟎
+> @KILL BOT
 `,
     m
   );
