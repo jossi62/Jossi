@@ -128,9 +128,9 @@ export async function handler(chatUpdate) {
                     modoadmin: true,
                     onlyGod: false,
                     onlyLatinos: false,
-                    detect: true,
+                    detect: false,
                     audios: false,
-                    antiLink: true,
+                    antiLink: false,
                     delete: false,
                     modohorny: false,
                     nsfw: false,
@@ -519,7 +519,7 @@ global.dfail = (type, m, conn) => {
         private: `⚕️ Este comando solo se puede usar en el *Chat Privado* conmigo.`,
         admin: `⭐ Este comando solo está disponible para *Administradores del Grupo*.`,
         botAdmin: `🚩 Necesito ser *Administrador* para poder ejecutar este comando.`,
-        unreg: `🤚🏻 Debes estar *Registrado* para usar este comando.\n\nUsa: */reg nombre.edad*\nEjemplo: /reg Mvrco.20`,
+        unreg: `🤚🏻 Debes estar *Registrado* para usar este comando.\n\nUsa: */reg nombre.edad*\nEjemplo: /reg Alexnn.20`,
         restrict: `⚠️ Esta función está *Restringida* por el propietario del bot.*`
     }[type];
     if (msg) return conn.reply(m.chat, msg, m,).then(_ => m.react('✖️'))

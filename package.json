@@ -1,5 +1,5 @@
 {
-    "name": "KILLBOT",
+    "name": "Alexnn",
     "version": "2.0.7",
     "description": "Simple WhatsApp Bot Multi Device",
     "main": "index.js",
@@ -18,20 +18,20 @@
         "eslint": "eslint .",
         "eslintfix": "eslint --fix ."
     },
-    "homepage": "https://github.com/Adrianmaze/Mvrco",
+    "homepage": "https://github.com/Adrianmaze/Alexnn",
     "author": {
-        "name": "Mvrco"
+        "name": "Alexnn"
     },
     "collaborators": {
-        "col1": "@KILLBOT",
+        "col1": "@Alexnn",
         "col2": "@Anuar"
     },
     "repository": {
         "type": "git",
-        "url": "git+https://github.com/Adrianmaze/Mvrco.git"
+        "url": "git+https://github.com/Adrianmaze/Alexnn.git"
     },
     "bugs": {
-        "url": "https://github.com/Adrianmaze/Mvrco/issues"
+        "url": "https://github.com/Adrianmaze/Alexnn/issues"
     },
     "license": "GPL-3.0-or-later",
     "dependencies": {
