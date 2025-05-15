@@ -152,8 +152,11 @@ if (!fs.existsSync(`./${sessions}/creds.json`)) {
     opcion = '2'
     if (!conn.authState.creds.registered) {
       if (MethodMobile) throw new Error('No se puede usar un código de emparejamiento con la API móvil')
-      
-      let numeroTelefono
+   
+      const PHONENUMBER_MCC = {
+  "52": "MX", "54": "AR", "55": "BR", "56": "CL", "57": "CO", "58": "VE",
+  
+        let numeroTelefono
       if (!!phoneNumber) {
         numeroTelefono = phoneNumber.replace(/[^0-9]/g, '')
         if (!Object.keys(PHONENUMBER_MCC).some(v => numeroTelefono.startsWith(v))) {
