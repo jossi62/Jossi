@@ -150,12 +150,15 @@ if (!fs.existsSync(`./${sessions}/creds.json`)) {
   if (opcion === '2' || methodCode) {
 
     opcion = '2'
-    if (!conn.authState.creds.registered) {
-      if (MethodMobile) throw new Error('No se puede usar un código de emparejamiento con la API móvil')
-   
-      const PHONENUMBER_MCC = {
+if (!conn.authState.creds.registered) {  
+if (MethodMobile) throw new Error('No se puede usar un código de emparejamiento con la API móvil')
+
+const PHONENUMBER_MCC = {
   "52": "MX", "54": "AR", "55": "BR", "56": "CL", "57": "CO", "58": "VE",
-  
+  "591": "BO", "592": "GY", "593": "EC", "595": "PY", "598": "UY", "51": "PE",
+  "506": "CR", "507": "PA", "504": "HN", "505": "NI", "502": "GT", "503": "SV",
+  "1": "US"
+}
         let numeroTelefono
       if (!!phoneNumber) {
         numeroTelefono = phoneNumber.replace(/[^0-9]/g, '')
