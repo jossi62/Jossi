@@ -511,9 +511,9 @@ export async function deleteUpdate(message) {
 
 global.dfail = (type, m, conn) => {
     const msg = {
-        rowner: `🚩 Hola, este comando solo puede ser utilizado por *KILL BOT*.`,
-        owner: `👤 Usuario, Este Comando Solo Puede Ser Utilizado Por *KILL BOT*.`,
-        mods: `🤚🏻 Hola, este comando solo puede ser utilizado por *KILL BOT*.`,
+        rowner: `🚩 Hola, este comando solo puede ser utilizado por *Alexn*.`,
+        owner: `👤 Usuario, Este Comando Solo Puede Ser Utilizado Por *Alexn*.`,
+        mods: `🤚🏻 Hola, este comando solo puede ser utilizado por *Alexn*.`,
         premium: `😂 Lo siento, este comando es exclusivo para *Usuarios Premium*.`,
         group: `💫 Este comando solo funciona dentro de *Grupos*.`,
         private: `⚕️ Este comando solo se puede usar en el *Chat Privado* conmigo.`,
