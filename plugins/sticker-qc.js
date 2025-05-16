@@ -11,15 +11,6 @@ const handler = async (m, { conn, args, usedPrefix, command }) => {
 
   if (!text) return conn.reply(m.chat, '🚩 Te Faltó El Texto!', m);
 
-  const who = m.mentionedJid && m.mentionedJid[0]
-    ? m.mentionedJid[0]
-    : m.fromMe
-    ? conn.user.jid
-    : m.sender;
-
-  const mentionRegex = new RegExp(`@${who.split('@')[0].replace(/[.*+?^${}()|[\]\\]/g, '\\$&')}\\s*`, 'g');
-  const mishi = text.replace(mentionRegex, '');
-
   if (mishi.length > 40)
     return conn.reply(m.chat, '🚩 El texto no puede tener más de 40 caracteres', m);
 
