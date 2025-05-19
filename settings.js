@@ -26,8 +26,8 @@ global.owner = [
 
 //*─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─*
 
-global.mods = [51968914403]
-global.prems = [51968914403]
+global.mods = []
+global.prems = []
 global.APIs = {
   nrtm: 'https://fg-nrtm.ddns.net',
   fgmods: 'https://api.fgmods.xyz',
