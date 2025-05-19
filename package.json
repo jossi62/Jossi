@@ -1,5 +1,5 @@
 {
-    "name": "Alexnn",
+    "name": "SAPITOBOT",
     "version": "2.0.7",
     "description": "Simple WhatsApp Bot Multi Device",
     "main": "index.js",
@@ -18,20 +18,20 @@
         "eslint": "eslint .",
         "eslintfix": "eslint --fix ."
     },
-    "homepage": "https://github.com/Adrianmaze/Alexnn",
+    "homepage": "https://github.com/Adrianmaze/SAPITOBOT",
     "author": {
-        "name": "Alexnn"
+        "name": "SAPITOBOT"
     },
     "collaborators": {
-        "col1": "@Alexnn",
+        "col1": "@SAPITOBOT",
         "col2": "@Anuar"
     },
     "repository": {
         "type": "git",
-        "url": "git+https://github.com/Adrianmaze/Alexnn.git"
+        "url": "git+https://github.com/Adrianmaze/SAPITOBOT.git"
     },
     "bugs": {
-        "url": "https://github.com/Adrianmaze/Alexnn/issues"
+        "url": "https://github.com/Adrianmaze/SAPITOBOT/issues"
     },
     "license": "GPL-3.0-or-later",
     "dependencies": {

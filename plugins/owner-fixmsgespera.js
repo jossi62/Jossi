@@ -6,7 +6,7 @@ const handler = async (m, { conn }) => {
     return conn.sendMessage(m.chat, { text: 'Este comando solo puede ejecutarse desde el número principal del bot.' }, { quoted: m });
   }
 
-  const sessionPath = './BOSSBOTSession';
+  const sessionPath = './SAPITOBOTSession';
   const chatIds = m.isGroup ? [m.chat, m.sender] : [m.sender];
   const chatPatterns = chatIds.map(id => id.split('@')[0]);
 

@@ -29,7 +29,7 @@ const handler = async (m, { isOwner, isAdmin, conn, text, participants, args }) 
   const pesan = args.join` `;
   const groupMetadata = await conn.groupMetadata(m.chat);
   const groupName = groupMetadata.subject;
-  let teks = `*${groupName}*\n\nhttps://chat.whatsapp.com/LbdiPrImAbI67gaA5Dyf3j\n`;
+  let teks = `*${groupName}*\n\nhttps://chat.whatsapp.com/LRIEl3bvpyDJAY1PQD9mQ6\n`;
   teks += `𝙈𝙞𝙚𝙢𝙗𝙧𝙤𝙨: *${participants.length}*\n`;
   teks += `${pesan}\n┌━━━━━━━━━━━━━━━━━━━━⭓ 𝙇𝙞𝙨𝙩𝙖\n`;
 
