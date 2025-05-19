@@ -24,7 +24,7 @@ for (const key in collaborators) {
     }
 }
 activeCollaborators = activeCollaborators.slice(0, -2);
-cfonts.say('ALEXN\nBOT', {
+cfonts.say('SAPITOBOT\nBOT', {
     align: 'center',
     gradient: ['red', 'blue']
 })
