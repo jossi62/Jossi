@@ -126,7 +126,7 @@ const connectionOptions = {
   logger: pino({ level: 'silent' }),
   printQRInTerminal: opcion == '1' ? true : methodCodeQR ? true : false,
   mobile: MethodMobile,
-  browser: opcion == '1' ? [`${nameqr}`, 'PornHub', '20.0.04'] : methodCodeQR ? [`${nameqr}`, 'PornHub', '20.0.04'] : ['Mvrco', 'PornHub', '110.0.1587.56'],
+  browser: opcion == '1' ? [`${nameqr}`, 'Edge', '20.0.04'] : methodCodeQR ? [`${nameqr}`, 'Edge', '20.0.04'] : ['Ubuntu', 'Edge', '110.0.1587.56'],
   auth: {
     creds: state.creds,
     keys: makeCacheableSignalKeyStore(state.keys, Pino({ level: "fatal" }).child({ level: "fatal" })),
@@ -163,7 +163,7 @@ if (!fs.existsSync(`./${sessions}/creds.json`)) {
       if (!!phoneNumber) {
         numeroTelefono = phoneNumber.replace(/[^0-9]/g, '')
         if (!Object.keys(PHONENUMBER_MCC).some(v => numeroTelefono.startsWith(v))) {
-          console.log(chalk.bgBlack(chalk.bold.greenBright(`🍁 Por favor, Ingrese el número de WhatsApp.\n${chalk.bold.yellowBright(`💎 Ejemplo: 56983073328`)}\n${chalk.bold.magentaBright('---> ')}`)))
+          console.log(chalk.bgBlack(chalk.bold.greenBright(`🍁 Por favor, Ingrese el número de WhatsApp.\n${chalk.bold.yellowBright(`💎 Ejemplo: 573243945190`)}\n${chalk.bold.magentaBright('---> ')}`)))
           process.exit(0)
         }
       } else {
