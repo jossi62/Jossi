@@ -1,50 +1,36 @@
-import { promises as fs } from 'fs';
+import { readdirSync, unlinkSync, existsSync, promises as fs, rmSync } from 'fs';
 import path from 'path';
 
-const handler = async (m, { conn }) => {
+const handler = async (m, { conn, usedPrefix }) => {
   if (global.conn.user.jid !== conn.user.jid) {
-    return conn.sendMessage(m.chat, { text: 'Este comando solo puede ejecutarse desde el número principal del bot.' }, { quoted: m });
+    return conn.sendMessage(m.chat, { text: 'Utiliza este comando directamente en el número principal del Bot' }, { quoted: m });
   }
-
-  const sessionPath = './SAPITOBOTSession';
-  const chatIds = m.isGroup ? [m.chat, m.sender] : [m.sender];
-  const chatPatterns = chatIds.map(id => id.split('@')[0]);
-
+  const chatId = m.isGroup ? [m.chat, m.sender] : [m.sender];
+  const sessionPath = './sessions'
   try {
-    // Verificar si existe la carpeta
-    const dirExists = await fs.stat(sessionPath).then(() => true).catch(() => false);
-    if (!dirExists) {
-      return conn.sendMessage(m.chat, { text: 'La carpeta de sesiones no existe.' }, { quoted: m });
-    }
-
-    // Leer archivos en bloques para directorios grandes
-    const dir = await fs.opendir(sessionPath);
+    const files = await fs.readdir(sessionPath);
     let filesDeleted = 0;
-
-    for await (const dirent of dir) {
-      const file = dirent.name;
-      if (chatPatterns.some(pattern => file.includes(pattern))) {
-        await fs.unlink(path.join(sessionPath, file));
-        filesDeleted++;
+    for (const file of files) {
+      for (const id of chatId) {
+        if (file.includes(id.split('@')[0])) {
+          await fs.unlink(path.join(sessionPath, file));
+          filesDeleted++;
+          break;
+        }
       }
     }
-
-    if (filesDeleted > 0) {
-      await conn.sendMessage(m.chat, { text: `✅ Se eliminaron *${filesDeleted}* archivos de sesión relacionados.` }, { quoted: m });
+    if (filesDeleted === 0) {
+      await conn.sendMessage(m.chat, { text: 'No se encontró ningún archivo que incluya la ID del chat' }, { quoted: m });
     } else {
-      await conn.sendMessage(m.chat, { text: '⚠️ No se encontraron archivos de sesión para este chat.' }, { quoted: m });
+      await conn.sendMessage(m.chat, { text: `*Se eliminaron ${filesDeleted} archivos de sesión*` }, { quoted: m });
     }
-
   } catch (err) {
-    console.error('Error al eliminar sesiones:', err);
-    await conn.sendMessage(m.chat, { text: '❌ Hubo un error al eliminar los archivos de sesión.' }, { quoted: m });
+    console.error('Error al leer la carpeta o los archivos de sesión:', err);
+    await conn.sendMessage(m.chat, { text: 'Ocurrió un error al eliminar los archivos de sesión' }, { quoted: m });
   }
-
-  await conn.sendMessage(m.chat, { text: '👋 *¿Ya me pueden ver?*' }, { quoted: m });
+  await conn.sendMessage(m.chat, { text: '*Hola, ¿ya me pueden ver?*' }, { quoted: m });
 };
-
-handler.help = ['fixmsgespera']
+handler.help = ['ds']
 handler.tags = ['group']
 handler.command = /^(fixmsgespera)$/i;
-
 export default handler;

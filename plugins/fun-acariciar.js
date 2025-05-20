@@ -1,4 +1,4 @@
-//Codígo de SAPITOBOT
+//Codígo de KILLBOT
 
 import fs from 'fs';
 import path from 'path';

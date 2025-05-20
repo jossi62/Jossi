@@ -2,16 +2,18 @@ import { sticker } from '../lib/sticker.js';
 import axios from 'axios';
 
 const handler = async (m, { conn, args, usedPrefix, command }) => {
+  const who = m.sender; // Definimos al autor del mensaje
   let text;
+
   if (args.length >= 1) {
-    text = args.slice(0).join(" ");
+    text = args.join(" ");
   } else if (m.quoted && m.quoted.text) {
     text = m.quoted.text;
-  } else return conn.reply(m.chat, '🚩 Te Faltó El Texto!', m);
+  } else {
+    return conn.reply(m.chat, '🚩 Te Faltó El Texto!', m);
+  }
 
-  if (!text) return conn.reply(m.chat, '🚩 Te Faltó El Texto!', m);
-
-  if (mishi.length > 40)
+  if (text.length > 40)
     return conn.reply(m.chat, '🚩 El texto no puede tener más de 40 caracteres', m);
 
   const pp = await conn.profilePictureUrl(who).catch(() => 'https://telegra.ph/file/24fa902ead26340f3df2c.png');
@@ -45,23 +47,28 @@ const handler = async (m, { conn, args, usedPrefix, command }) => {
         avatar: true,
         from: {
           id: 1,
-          name: `${who?.name || nombre}`,
-          photo: { url: `${pp}` }
+          name: nombre,
+          photo: { url: pp }
         },
-        text: mishi,
+        text: text,
         replyMessage: {}
       }
     ]
   };
 
-  const json = await axios.post('https://bot.lyo.su/quote/generate', obj, {
-    headers: { 'Content-Type': 'application/json' }
-  });
+  try {
+    const { data } = await axios.post('https://bot.lyo.su/quote/generate', obj, {
+      headers: { 'Content-Type': 'application/json' }
+    });
 
-  const buffer = Buffer.from(json.data.result.image, 'base64');
-  let stiker = await sticker(buffer, false, global.packname, global.author);
+    const buffer = Buffer.from(data.result.image, 'base64');
+    const stiker = await sticker(buffer, false, global.packname, global.author);
 
-  if (stiker) return conn.sendFile(m.chat, stiker, 'quote.webp', '', fkontak);
+    if (stiker) return conn.sendFile(m.chat, stiker, 'quote.webp', '', fkontak);
+  } catch (e) {
+    console.error(e);
+    conn.reply(m.chat, '❌ Ocurrió un error al generar la imagen.', m);
+  }
 };
 
 handler.help = ['qc'];

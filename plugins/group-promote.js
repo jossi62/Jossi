@@ -9,7 +9,7 @@ let handler = async (m, { conn, usedPrefix, text }) => {
   if (!text && !m.quoted)
     return conn.reply(
       m.chat,
-      '🚩 Use el comandó correctamente\n\n`Ejemplo :`\n\n> . promote @SAPITOBOTbot',
+      '🚩 Use el comandó correctamente\n\n`Ejemplo :`\n\n> . promote @KILLBOT',
       m
     );
   if (number.length > 13 || (number.length < 11 && number.length > 0))

@@ -1141,7 +1141,7 @@ class Speedtest(object):
         while 1:
             try:
                 configxml_list.append(stream.read(1024))
-            except (OSError, EOSAPITOBOTor):
+            except (OSError, EOKILLBOTor):
                 raise ConfigRetrievalError(get_exception())
             if len(configxml_list[-1]) == 0:
                 break
@@ -1289,7 +1289,7 @@ class Speedtest(object):
                 while 1:
                     try:
                         serversxml_list.append(stream.read(1024))
-                    except (OSError, EOSAPITOBOTor):
+                    except (OSError, EOKILLBOTor):
                         raise ServersRetrievalError(get_exception())
                     if len(serversxml_list[-1]) == 0:
                         break

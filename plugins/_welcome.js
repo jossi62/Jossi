@@ -58,7 +58,7 @@ export async function before(m, { conn, participants, groupMetadata }) {
           body: dev,
           mediaUrl: pp,
           mediaType: 2,
-          thumbnailUrl: 'https://ibb.co/7N8yHZ2q/avatar-contact.jpg',
+          thumbnailUrl: 'https://i.ibb.co/zhrknM6F/avatar-contact.jpg',
           thumbnail: img
         }
       },
@@ -91,7 +91,7 @@ export async function before(m, { conn, participants, groupMetadata }) {
           body: dev,
           mediaUrl: pp,
           mediaType: 2,
-          thumbnailUrl: 'https://ibb.co/7N8yHZ2q/avatar-contact.jpg',
+          thumbnailUrl: 'https://i.ibb.co/zhrknM6F/avatar-contact.jpg',
           thumbnail: img
         }
       },

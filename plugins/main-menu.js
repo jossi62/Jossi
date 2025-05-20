@@ -1,6 +1,6 @@
 let handler = async (m, { isPrems, conn }) => {
    m.react('👾')
-   let img = 'https://ibb.co/7N8yHZ2q/avatar-contact.jpg'
+   let img = 'https://i.ibb.co/zhrknM6F/avatar-contact.jpg'
    let texto = `
 🪙 𝐌 𝐔 𝐋 𝐓 𝐈 - 𝐌 𝐄 𝐍 𝐔́ 
 
@@ -9,49 +9,11 @@ let handler = async (m, { isPrems, conn }) => {
 ┃⋗ 👤 *.owner*  
 ┃⋗ 🌟 *.grupos*  
 ┃⋗ 📜 *.menu*  
-┃⋗ 📖 *.menu2*  
-┃⋗ 📚 *.menu3* 
-┃⋗ 🖇️ *.menu4* 
-┃⋗ 🐶 *.menu5*
 ┃⋗ 🏓 *.ping*  
 ┃⋗ ⏳ *.runtime*  
 ┃⋗ 📢 *.reportar*  
 ┃⋗ 💡 *.sugerencia*
 ┗━━━━━━━━━━━━━━┛
-
-「 *🦅 𝘔𝘢𝘴𝘤𝘰𝘵𝘢𝘴 🦅* 」
-┣━━━━━━━━━━━━━━┫
-┃⋗ 🛒 *.comprar*  
-┃⋗ 💲 *.contratar* 
-┃⋗ 🍖 *.alimentar*  
-┃⋗ 💰 *.costos*  
-┃⋗ 👀 *.nombre* 
-┃⋗ 🐺 *.mimascota*  
-┃⋗ 🐹 *.mascotas*  
-┃⋗ 🦅 *.mascota*
-┃⋗ 🕳️ *.excavar*
-┃⋗ 🐶 *.paseo*
-┃⋗ 🥎 *.pelota*
-┃⋗ 🚩 *.level*
-┃⋗ 🚩 *.levelmax*
-┃⋗ 🔥 *.batalla 1*
-┃⋗ 🛡️ *.batalla 2*
-┃⋗ 🗡️ *.batalla 3*
-┃⋗ 💣 *.batalla4*
-┃⋗ ⚔️ *.batallainfo* 
-┃⋗ 📍 *.infomasc*
-┃⋗ 👥 *.viajar*
-┃⋗ 🎁 *.masc*
-┗━━━━━━━━━━━━━━┛
-
-  「 *🔎 𝘉𝘶𝘴𝘲𝘶𝘦𝘥𝘢𝘴 🔎* 」     
-┣━━━━━━━━━━━━━━┫  
-┃⋗ 🛒 *.mercadolibre*  
-┃⋗ 🖼️ *.pinterest <texto>*  
-┃⋗ 📷 *.imagen <texto>*  
-┃⋗ 📹 *.imag <texto>*  
-┃⋗ 🔍 *.ytsearch <búsqueda>*  
-┗━━━━━━━━━━━━━━┛  
 
     「 *👥 𝘎𝘳𝘶𝘱𝘰𝘴 👥* 」     
 ┣━━━━━━━━━━━━━━┫  
@@ -104,51 +66,6 @@ let handler = async (m, { isPrems, conn }) => {
 ┃⋗ 🔄 *.reiniciar*  
 ┃⋗ 🚪 *.salir*  
 ┃⋗ 🔄 *.update*  
-┗━━━━━━━━━━━━━━┛  
-
-「 *🎨 𝘓𝘰𝘨𝘰 - 𝘮𝘢𝘬𝘦𝘳 🎨* 」     
-┣━━━━━━━━━━━━━━┫  
-┃⋗ ❤️ *.logocorazon <texto>*  
-┃⋗ 🎄 *.logochristmas <texto>*  
-┃⋗ 👩🏻‍❤️‍👨🏻 *.logopareja <texto>*  
-┃⋗ 💥 *.logoglitch <texto>*  
-┃⋗ 😔 *.logosad <texto>*  
-┃⋗ 🎮 *.logogaming <texto>*  
-┃⋗ 🌟 *.logosolitario <texto>*  
-┃⋗ 🐉 *.logodragonball <texto>*  
-┃⋗ ⚡ *.logoneon <texto>*  
-┃⋗ 🐱 *.logogatito <texto>*  
-┃⋗ 🎮 *.logochicagamer <texto>*  
-┃⋗ 💪 *.logoarmy <texto>*  
-┃⋗ 🍥 *.logonaruto <texto>*  
-┃⋗ 🚀 *.logofuturista <texto>*  
-┃⋗ ☁️ *.logonube <texto>*  
-┃⋗ 👼 *.logoangel <texto>*  
-┃⋗ 🌌 *.logocielo <texto>*  
-┃⋗ 🎨 *.logograffiti3d <texto>*  
-┃⋗ 🔲 *.logomatrix <texto>*  
-┃⋗ 👻 *.logohorror <texto>*  
-┃⋗ 🎭 *.logoalas <texto>*  
-┃⋗ 🎮 *.logopubg <texto>*  
-┃⋗ ⚔️ *.logoguerrero <texto>*  
-┃⋗ 🎮 *.logopubgfem <texto>*  
-┃⋗ 🏆 *.logolol <texto>*  
-┃⋗ 👾 *.logoamongus <texto>*  
-┃⋗ 📖 *.logoportadaplayer <texto>*  
-┃⋗ 📝 *.logoportadaff <texto>*  
-┃⋗ 🐅 *.logovideotiger <texto>*  
-┃⋗ 🎬 *.logovideointro <texto>*  
-┃⋗ 🎮 *.logovideogaming <texto>*  
-┃⋗ 😿 *.sadcat <texto>*  
-┃⋗ 🐦 *.tweet <comentario>*  
-┗━━━━━━━━━━━━━━┛  
-
-   「 *📸 𝘐𝘮𝘢́𝘨𝘦𝘯𝘦𝘴 📸* 」     
-┣━━━━━━━━━━━━━━┫  
-┃⋗ 🐱 *.neko*  
-┃⋗ 🖼️ *.pinterest <búsqueda>*  
-┃⋗ 💑 *.ppcouple*  
-┃⋗ 💕 *.waifu*  
 ┗━━━━━━━━━━━━━━┛  
 
    「 *📴 𝘖𝘯 / 𝘖𝘧𝘧 📴* 」     
@@ -264,80 +181,6 @@ let handler = async (m, { isPrems, conn }) => {
 ┃⋗ 🔥 *.8vs8*  
 ┃⋗ 🔥 *.12vs12*  
 ┃⋗ 🔥 *.16vs16*  
-┃⋗ 💣 *.guerra*  
-┃⋗ 🔐 *.interna*  
-┃⋗ 📜 *.reglasclk*
-┃⋗ 📜 *.reglaslideres*  
-┃⋗ 📜 *.reglaslideres2*  
-┃⋗ ⚔️ *.scrim*  
-┃⋗ 🎮 *.menu4*  
-┃⋗ 🏝️ *.bermuda*  
-┃⋗ 🟦 *.cuadrilatero*  
-┃⋗ 🛑 *.hexagonal* 
-┗━━━━━━━━━━━━━━┛  
-
-   「 *🔉 𝘈𝘶𝘥𝘪𝘰𝘴 🔉* 」  
-┣━━━━━━━━━━━━━━┫  
-┃⋗ 🎵 *.bass <mp3/vn>*  
-┃⋗ 🎵 *.blown <mp3/vn>*  
-┃⋗ 🎵 *.deep <mp3/vn>*  
-┃⋗ 🎵 *.earrape <mp3/vn>*  
-┃⋗ 🎵 *.fast <mp3/vn>*  
-┃⋗ 🎵 *.fat <mp3/vn>*  
-┃⋗ 🎵 *.nightcore <mp3/vn>*  
-┃⋗ 🎵 *.reverse <mp3/vn>*  
-┃⋗ 🎵 *.robot <mp3/vn>*  
-┃⋗ 🎵 *.slow <mp3/vn>*  
-┃⋗ 🎵 *.smooth <mp3/vn>*  
-┃⋗ 🎵 *.tupai <mp3/vn>*  
-┃⋗ 🎵 *.reverb <mp3/vn>*  
-┃⋗ 🎵 *.chorus <mp3/vn>*  
-┃⋗ 🎵 *.flanger <mp3/vn>*  
-┃⋗ 🎵 *.distortion <mp3/vn>*  
-┃⋗ 🎵 *.pitch <mp3/vn>*  
-┃⋗ 🎵 *.highpass <mp3/vn>*  
-┃⋗ 🎵 *.lowpass <mp3/vn>*  
-┃⋗ 🎵 *.underwater <mp3/vn>*  
-┗━━━━━━━━━━━━━━┛  
-
-      「 *𝘈𝘯𝘪𝘮𝘦 🌸* 」     
-┣━━━━━━━━━━━━━━┫  
-┃⋗ 🌐 *.animelink*  
-┃⋗ 🦸‍♂️ *.akira*  
-┃⋗ 👽 *.akiyama*  
-┃⋗ 👧 *.anna*  
-┃⋗ 🌸 *.asuna*  
-┃⋗ 💃 *.ayuzawa*  
-┃⋗ 🌀 *.boruto*  
-┃⋗ 🦋 *.chiho*  
-┃⋗ 💖 *.chitoge*  
-┃⋗ 💣 *.deidara*  
-┃⋗ 🛡️ *.erza*  
-┃⋗ 🌼 *.elaina*  
-┃⋗ 🐼 *.eba*  
-┃⋗ 🌟 *.emilia*  
-┃⋗ 👑 *.hestia*  
-┃⋗ 🍃 *.hinata*  
-┃⋗ 🎶 *.inori*  
-┃⋗ 🌺 *.isuzu*  
-┃⋗ 🦇 *.itachi*  
-┃⋗ 🍃 *.itori*  
-┃⋗ 🏯 *.kaga*  
-┃⋗ 🌀 *.kagura*  
-┃⋗ 🎨 *.kaori*  
-┃⋗ 🍣 *.keneki*  
-┃⋗ 🐤 *.kotori*  
-┃⋗ 💘 *.kurumi*  
-┃⋗ 🐍 *.madara*  
-┃⋗ ⚔️ *.mikasa*  
-┃⋗ 🎤 *.miku*  
-┃⋗ ⚡ *.minato*  
-┃⋗ 🌪️ *.naruto*  
-┃⋗ 🔥 *.nezuko*  
-┃⋗ 💫 *.sagiri*  
-┃⋗ 🐉 *.sasuke*  
-┃⋗ 🌸 *.sakura*  
-┃⋗ 🦖 *.pokedex <pokemon>*  
 ┗━━━━━━━━━━━━━━┛  
 
     「 *𝘚𝘵𝘪𝘤𝘬𝘦𝘳𝘴 🏞* 」     
@@ -348,21 +191,6 @@ let handler = async (m, { isPrems, conn }) => {
 ┃⋗ 🎨 *.sticker*  
 ┃⋗ 🖋️ *.wm <nombre>|<autor>*  
 ┃⋗ 🎞️ *.tovid <sticker>*  
-┗━━━━━━━━━━━━━━┛
-
-      「 *𝘕𝘴𝘧𝘸 🔞* 」
-┣━━━━━━━━━━━━━━┫    
-┃⋗ 🔞 *.booty*  
-┃⋗ 🔞 *.ecchi*  
-┃⋗ 🔞 *.furro*  
-┃⋗ 🔞 *.lesbianas*  
-┃⋗ 🔞 *.nsfwloli*  
-┃⋗ 🔞 *.panties*  
-┃⋗ 🔞 *.pene*  
-┃⋗ 🔞 *.rule34 <búsqueda>*  
-┃⋗ 🔞 *.pechos*  
-┃⋗ 🔞 *.tetas*  
-┃⋗ 🔞 *.trapito*  
 ┗━━━━━━━━━━━━━━┛
 
     「 *🌟 𝘙𝘗𝘎 🌟* 」     
@@ -387,7 +215,7 @@ let handler = async (m, { isPrems, conn }) => {
 ┃⋗ 📝 *.unreg*  
 ┗━━━━━━━━━━━━━━┛
 
-> SAPITOBOT`
+> KILLBOT`
 
    const fkontak = {
       "key": {
