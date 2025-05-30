@@ -1,5 +1,5 @@
 {
-    "name": "KILLBOT",
+    "name": "KILL BOT",
     "version": "2.0.7",
     "description": "Simple WhatsApp Bot Multi Device",
     "main": "index.js",
@@ -20,10 +20,10 @@
     },
     "homepage": "https://github.com/Adrianmaze/KILLBOT",
     "author": {
-        "name": "KILLBOT"
+        "name": "KILL BOT"
     },
     "collaborators": {
-        "col1": "@KILLBOT",
+        "col1": "@KILL",
         "col2": "@Anuar"
     },
     "repository": {
