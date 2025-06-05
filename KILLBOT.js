@@ -164,18 +164,18 @@ if (!fs.existsSync(`./${sessions}/creds.json`)) {
       if (!!phoneNumber) {
         numeroTelefono = phoneNumber.replace(/[^0-9]/g, '')
         if (!Object.keys(PHONENUMBER_MCC).some(v => numeroTelefono.startsWith(v))) {
-          console.log(chalk.bgBlack(chalk.bold.greenBright(`🍁 Por favor, Ingrese el número de WhatsApp.\n${chalk.bold.yellowBright(`💎 Ejemplo: 56983073328`)}\n${chalk.bold.magentaBright('---> ')}`)))
+          console.log(chalk.bgBlack(chalk.bold.greenBright(`🍁 Por favor, Ingrese el número de WhatsApp.\n${chalk.bold.yellowBright(`💎 Ejemplo: 50764880277`)}\n${chalk.bold.magentaBright('---> ')}`)))
           process.exit(0)
         }
       } else {
         while (true) {
-          numeroTelefono = await question(chalk.bgBlack(chalk.bold.greenBright(`🍁 Por favor, escriba su número de WhatsApp.\n💎 Ejemplo: 56983073328\n`)))
+          numeroTelefono = await question(chalk.bgBlack(chalk.bold.greenBright(`🍁 Por favor, escriba su número de WhatsApp.\n💎 Ejemplo: 50764880277\n`)))
           numeroTelefono = numeroTelefono.replace(/[^0-9]/g, '')
 
           if (numeroTelefono.match(/^\d+$/) && Object.keys(PHONENUMBER_MCC).some(v => numeroTelefono.startsWith(v))) {
             break
           } else {
-            console.log(chalk.bgBlack(chalk.bold.greenBright(`🍁 Por favor, escriba su número de WhatsApp.\n💎 Ejemplo: 56983073328\n`)))
+            console.log(chalk.bgBlack(chalk.bold.greenBright(`🍁 Por favor, escriba su número de WhatsApp.\n💎 Ejemplo: 50764880277\n`)))
           }
         }
         rl.close()
