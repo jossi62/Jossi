@@ -18,7 +18,7 @@
         "eslint": "eslint .",
         "eslintfix": "eslint --fix ."
     },
-    "homepage": "https://github.com/Adrianmaze/JOSSIBOT",
+    "homepage": "https://github.com/jossi62/Jossi",
     "author": {
         "name": "KILL BOT"
     },
@@ -28,10 +28,10 @@
     },
     "repository": {
         "type": "git",
-        "url": "git+https://github.com/Adrianmaze/JOSSIBOT.git"
+        "url": "git+https://github.com/jossi62/Jossi.git"
     },
     "bugs": {
-        "url": "https://github.com/Adrianmaze/JOSSIBOT/issues"
+        "url": "https://github.com/jossi62/Jossi/issues"
     },
     "license": "GPL-3.0-or-later",
     "dependencies": {
